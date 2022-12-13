@@ -10,6 +10,8 @@ Option 1: Grade part 01 as presented.
 01b: 01_b_Classifiers_FromCSV_XGBoost_RF_SVM_DT.ipynb
 In this part, the CSV’s generated per channel are imported from part 1a. Then, it is normalized and loaded into different classifiers like SVM, Random Forest, XGBoost, MLP and DT using sklearn library.
 
+01c ADHD_Visualisation_MNE.ipynb: Notebook created only for EEG Data Visualisation.
+
 02: Optional:
 This is the first notebook where I did before part 01. This is independent from part 01. Submitted in case you like to review it.
 1. Normalization on Raw data
