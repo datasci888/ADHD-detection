@@ -30,4 +30,8 @@ In case you notice, Theta waveband is not extracted as by the time I found it, m
 
 The notebook takes one hour to run 150 epochs. It is not mentioned in paper; just added for your review in case.
 
+Dataset folder: ADHD_part1 and ADHD_part2 folders contain recordings of ADHD participants. And Control_part1 and Control_part2 contains non-ADHD recordings. Save them in the root folder and update the path in the code. 
+
+Use NewCSVs_Dataset_I_BandstoPart-III folder files as an input to Part III in case you need. 
+
 Thank you!
