@@ -1,37 +1,26 @@
-# ML7267ProjectCodes
-Option 1: Grade part 01 as presented. 
+# EEG-based ADHD Classification
 
-01: 
-01a:  01_a_MLP_Bandwaves.ipynb
-	⁃	Loaded Mat files and created CSV’s. Csvs will be saved into the same directory. 
-	⁃	Read the saved Csv’s and did spectral analysis and created new dataset. 
-	⁃	MLP model
+This project is focused on the classification of ADHD using raw EEG input. The raw EEG input undergoes filtering through a Butterworth filter, followed by the application of Independent Component Analysis (ICA). The classification of ADHD is then executed using the LightGBM model, providing insightful results in understanding and detecting ADHD patterns from EEG data.
 
-01b: 01_b_Classifiers_FromCSV_XGBoost_RF_SVM_DT.ipynb
-In this part, the CSV’s generated per channel are imported from part 1a. Then, it is normalized and loaded into different classifiers like SVM, Random Forest, XGBoost, MLP and DT using sklearn library.
+## Overview
+This project demonstrates the feasibility and accuracy of using machine learning models, specifically LightGBM, in classifying ADHD based on processed EEG data, contributing significantly to the field of medical diagnosis and mental health assessment.
 
-01c ADHD_Visualisation_MNE.ipynb: Notebook created only for EEG Data Visualisation.
+## Structure
+1. **Raw EEG Input Processing**: Initial stage involves acquiring and processing raw EEG data.
+2. **Filtering with Butterworth Filter**: The processed EEG data is then filtered using a Butterworth filter to isolate relevant features.
+3. **Application of ICA**: Independent Component Analysis (ICA) is applied to the filtered data to separate independent sources.
+4. **ADHD Classification with LightGBM**: The final step involves the classification of ADHD using the LightGBM model, assessing the patterns in the EEG data.
 
-02: Optional:
-This is the first notebook where I did before part 01. This is independent from part 01. Submitted in case you like to review it.
-1. Normalization on Raw data
-2. PCA pre-processing.
-3. Created new dataset using tensor flow.
-4. Coded MLP model.
+## Results
+Using LightGBM for ADHD classification, we achieved an accuracy of \( \approx 90.95\% \). Here are the scores from different models used:
+- **KNN**: \( \approx 94.76\% \)
+- **LightGBM**: \( \approx 90.95\% \)
+- **Logistic Regression**: \( \approx 42.86\% \)
+- **MLPClassifier**: \( \approx 42.86\% \)
+- **Random Forest**: \( \approx 42.86\% \)
 
-Part 3 submission: Independent
-03-08: Optional:
-Further to the presentation, as we discussed, I did Data pre-processing, and ICA and improved the accuracy to 90%+.
+## Usage
+To run the code in your local Jupyter Notebook, clone the repository and open the `.ipynb` file. Ensure that you have all the required libraries installed.
 
-These notebooks 03-08 are very slow as the data takes too much time to load and process. There are almost 20 million records. It takes an hour or more to complete the steps 03-08 but it performed well thank god. This part was coded this week and so there is no more time. For future, I have ideas to re-code it for faster runs. 
+## contact datasci888@gmail.com 
 
-And, 03-08 is one single program divided into section due to data overload. It is explained in video part II. 
-In case you notice, Theta waveband is not extracted as by the time I found it, my system was crashing. Regardless, it is producing an accuracy of 95% almost by KNN.
-
-The notebook takes one hour to run 150 epochs. It is not mentioned in paper; just added for your review in case.
-
-Dataset folder: ADHD_part1 and ADHD_part2 folders contain recordings of ADHD participants. And Control_part1 and Control_part2 contains non-ADHD recordings. Save them in the root folder and update the path in the code. 
-
-Use NewCSVs_Dataset_I_BandstoPart-III folder files as an input to Part III in case you need. 
-
-Thank you!
